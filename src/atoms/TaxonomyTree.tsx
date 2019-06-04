@@ -1,5 +1,6 @@
-import React from "react";
-import superagent from "superagent";
+import * as React from "react";
+// @ts-ignore
+import * as request from "superagent";
 import { withStyles, Typography } from "@material-ui/core";
 import {
   Add,
@@ -7,11 +8,19 @@ import {
   KeyboardArrowUp,
   KeyboardArrowDown
 } from "@material-ui/icons";
+// @ts-ignore
 import Tree, { getTreeLeafDataByIndexArray } from "material-ui-tree";
 
-class TaxonomyTree extends React.Component {
-  state = {
-    alignRight: false,
+
+type TaxonomyTreeProps = {
+  classes: any,
+}
+
+type TaxonomyTreeState = {
+  data: any,
+}
+class TaxonomyTree extends React.Component<TaxonomyTreeProps, TaxonomyTreeState> {
+  state:any = {
     data: {
       path: "material-ui-tree",
       type: "tree",
@@ -21,13 +30,14 @@ class TaxonomyTree extends React.Component {
     }
   };
 
-  requestTreeLeafChildrenData = (leafData, chdIndex, doExpand) => {
+  requestTreeLeafChildrenData = (leafData:any, chdIndex:Array<number>, doExpand:Function) => {
     const { url, type } = leafData;
     if (type === "tree") {
-      superagent.get(url).then(({ body: res }) => {
-        if (res && res.tree) {
+      request.get(url).then(({ body }:{body: any}) => {
+        
+        if (body && body.tree) {
           const data = { ...this.state.data };
-          getTreeLeafDataByIndexArray(data, chdIndex, "tree").tree = res.tree;
+          getTreeLeafDataByIndexArray(data, chdIndex, "tree").tree = body.tree;
           this.setState({ data }, () => {
             doExpand();
           });
@@ -40,45 +50,36 @@ class TaxonomyTree extends React.Component {
     }
   };
 
-  renderTreeLeafLabel = (leafData, expand) => {
-    const { classes } = this.props;
+  renderTreeLeafLabel = (leafData:any, expand:boolean) => {
+    const classes:any = this.props.classes;
     const { path, type } = leafData;
     if (type === "tree") {
       if (expand) {
         return (
-          <Typography viriant="body1" className={classes.leaf}>
-            {/* <FolderOpen className={classes.icon} /> */}
-            {path}
-          </Typography>
+          <Typography variant="body1" className={classes.leaf}>{path}</Typography>
         );
       }
       return (
-        <Typography viriant="body1" className={classes.leaf}>
-          {/* <Folder className={classes.icon} /> */}
-          {path}
-        </Typography>
+        <Typography variant="body1" className={classes.leaf}>{path}</Typography>
       );
     }
     if (type === "blob") {
       if (path.startsWith(".") || path.includes("config")) {
         return (
-          <Typography viriant="body2" className={classes.leaf}>
-            {/* <Settings className={classes.icon} /> */}
+          <Typography variant="body2" className={classes.leaf}>
             {path}
           </Typography>
         );
       }
       if (path.endsWith(".js")) {
         return (
-          <Typography viriant="body2" className={classes.leaf}>
-            {/* <Description className={classes.icon} /> */}
+          <Typography variant="body2" className={classes.leaf}>
             {path}
           </Typography>
         );
       }
       return (
-        <Typography viriant="body2" className={classes.leaf}>
-          {/* <InsertDriveFile className={classes.icon} /> */}
+        <Typography variant="body2" className={classes.leaf}>
           {path}
         </Typography>
       );
@@ -86,7 +87,7 @@ class TaxonomyTree extends React.Component {
     return null;
   };
 
-  getTreeLeafActionsData = (leafData, chdIndex, expand) => {
+  getTreeLeafActionsData = (leafData:any, chdIndex:Array<number>, expand:boolean) => {
     const { classes } = this.props;
     const { type } = leafData;
     if (type === "tree") {
@@ -137,7 +138,7 @@ class TaxonomyTree extends React.Component {
   };
 
   render() {
-    const { classes } = this.props;
+    const classes:any = this.props.classes;
     return (
       <Tree
         actionsAlignRight={true}

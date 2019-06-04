@@ -9,10 +9,10 @@ type ProjectsListLayoutProps = {
   projects: Array<any>;
 };
 
-const dummyDelete = project => () => {
+const dummyDelete = (project:any) => () => {
   console.log("delete", project.id);
 };
-const dummyOpen = project => () => {
+const dummyOpen = (project:any) => () => {
   console.log("open", project.id);
 };
 

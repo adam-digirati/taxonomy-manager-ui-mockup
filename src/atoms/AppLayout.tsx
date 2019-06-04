@@ -3,7 +3,7 @@ import TopBar from "../atoms/TopBar";
 import { Grid, CssBaseline } from "@material-ui/core";
 
 type AppLayoutProps = {
-  topBar: TopBar;
+  topBar: React.ReactNode;
 };
 
 const AppLayout: React.SFC<AppLayoutProps> = ({ children, topBar }) => (

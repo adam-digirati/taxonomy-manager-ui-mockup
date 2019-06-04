@@ -1,9 +1,18 @@
 import * as React from "react";
 import { FormControl, Input, InputLabel } from "@material-ui/core";
 
-const SchemaEditorTextField = ({ value, handleChange, name, label }) => (
+type HtmlEvent = React.ChangeEvent<HTMLInputElement>;
+
+type SchemaEditorTextFieldProps = { 
+  value:string;
+  handleChange?: React.EventHandler<HtmlEvent>;
+  name:string;
+  label?:string;
+};
+
+const SchemaEditorTextField: React.SFC<SchemaEditorTextFieldProps> = ({ value, handleChange, name, label }) => (
   <FormControl>
-    <InputLabel htmlFor={name}>{label}</InputLabel>
+    {label && <InputLabel htmlFor={name}>{label}</InputLabel>}
     <Input
       id={name}
       value={value}

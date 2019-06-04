@@ -9,6 +9,8 @@
     "@material-ui/icons": "4.0.1",
     "@types/react": "16.8.19",
     "@types/react-dom": "16.8.4",
+    "babel-loader": "8.0.4",
+    "langs": "^2.0.0",
     "material-ui-tree": "1.1.1",
     "material-ui-treeview": "3.3.0",
     "react": "16.8.4",

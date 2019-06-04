@@ -7,14 +7,14 @@ import ItemIdEditor from '../atoms/ItemIdEditor';
 import FormHeader from '../atoms/FormHeader';
 
 
-const ProjectProperties = () => (
+const ConceptProperties = () => (
   <Form>
-    <FormHeader>CRU Taxonomy UAT [Project]</FormHeader>
-    <ItemIdEditor itemId="https://crutaxonomy.poolparty.biz/CRUvocabularies" itemIdBase="https://crutaxonomy.poolparty.biz/" />
+    <FormHeader>CRU Commodity and Nutrient [Concept Scheme]</FormHeader>
+    <ItemIdEditor itemId="https://crutaxonomy.poolparty.biz/CRUvocabularies/b1c4d353-7058-4931-9629-7b2972463f44" itemIdBase="https://crutaxonomy.poolparty.biz/CRUvocabularies/" />
     <MultilingualTextProperty
       name="http://purl.org/dc/terms/title"
       label="Title"
-      value={[{ lang: "en", value: "CRU Taxonomy UAT" }]}
+      value={[{ lang: "en", value: "CRU Commodity and Nutrient" }]}
     />
     <MultilingualTextProperty
       name="http://purl.org/dc/terms/subject"
@@ -28,25 +28,26 @@ const ProjectProperties = () => (
         {
           lang: "en",
           value:
-            "Taxonomy built for use by CRU. Exported and downgraded from v5.6.1 to v5.4.3. 20161129."
+            ""
         }
       ]}
     />
     <MultiValueTextProperty
       name="http://purl.org/dc/terms/creator"
       label="Author"
-      value={["digirati", "digirati_testuser"]}
+      value={["Dr Ian Piper"]}
     />
     <MultilingualTextProperty
       name="http://purl.org/dc/terms/publisher"
       label="Publisher (Organisation)"
-      value={[{ lang: "en", value: "CRU" }]}
+      value={[{ lang: "en", value: "Tellura" }]}
     />
     <MultiValueTextProperty 
       name="http://purl.org/dc/terms/contributor"
       label="Contributor" 
       value={["Clair Honeywill"]} />
-    <TextProperty
+    Todo: Top concepts
+    {/* <TextProperty
       name="http://purl.org/dc/terms/date"
       label="Created"
       value="19.04.2017 - 18:13"
@@ -60,7 +61,7 @@ const ProjectProperties = () => (
 
     placeholder default language
 
-    placeholder add vocabularies
+    placeholder add vocabularies */}
   </Form>
 );
 // Workflow
@@ -78,4 +79,4 @@ const ProjectProperties = () => (
 // Project Version
 //"test";
 
-export default ProjectProperties;
+export default ConceptProperties;

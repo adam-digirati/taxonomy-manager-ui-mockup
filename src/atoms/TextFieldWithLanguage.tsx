@@ -10,9 +10,9 @@ type HtmlEvent = React.ChangeEvent<HTMLInputElement>;
 
 type SchemaEditorTextFieldProps = {
   value: any;
-  handleChange: React.EventHandler<HtmlEvent>;
+  handleChange?: React.EventHandler<HtmlEvent>;
   name: string;
-  label: string;
+  label?: string;
   languageCode: string;
 };
 
@@ -24,7 +24,7 @@ const SchemaEditorTextField: React.SFC<SchemaEditorTextFieldProps> = ({
   languageCode
 }) => (
   <FormControl>
-    <InputLabel htmlFor={`${name}_${languageCode}`}>{label}</InputLabel>
+    {label && <InputLabel htmlFor={`${name}_${languageCode}`}>{label}</InputLabel>}
     <Input
       id={`${name}_${languageCode}`}
       value={value}

@@ -1,19 +1,25 @@
 import * as React from "react";
 import TextField from "../atoms/TextField";
+import FormFieldLabel from '../atoms/FormFieldLabel';
+import FromGroup from '../atoms/FormGroup';
 
 type MultilingualTextPropertyProps = {
+  name: string;
   value: Array<string>;
+  label: string;
 };
 
 const MultilingualTextProperty: React.SFC<MultilingualTextPropertyProps> = ({
   value,
+  label,
   ...props
 }) => (
-  <div>
-    {value.map(val => (
-      <TextField {...props} value={val} />
+  <FromGroup>
+    <FormFieldLabel label={label} />
+    {value.map((val, index) => (
+      <TextField {...props} value={val} name={`${name}_${index}`} />
     ))}
-  </div>
+  </FromGroup>
 );
 
 export default MultilingualTextProperty;

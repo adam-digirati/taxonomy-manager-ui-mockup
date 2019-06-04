@@ -16,9 +16,9 @@ const TopBar: React.SFC<TopBarProps> = ({ children, title }) => (
         alignItems="center"
       >
         <Typography variant="h6">{title}</Typography>
-        <Grid direction="row" justify="flex-end" alignItems="center">
+        <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', flexDirection: 'row'}}>
           {children}
-        </Grid>
+        </div>
       </Grid>
     </Toolbar>
   </AppBar>
