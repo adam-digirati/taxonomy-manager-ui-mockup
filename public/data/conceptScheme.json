@@ -4,26 +4,26 @@
       "sha": "8027427d52d589e3167685ce7e59d7b65468555d",
       "path": "Aluminium",
       "type": "concept",
-      "url": "https://raw.githubusercontent.com/adam-digirati/taxonomy-manager-ui-mockup/master/public/data/concept.json"
+      "url": "https://adam-digirati.github.io/concept.json"
     },{
       "sha": "8027427d52d589e3167685ce7e59d7b65468555e",
       "path": "Coal",
       "type": "concept",
-      "url": "https://raw.githubusercontent.com/adam-digirati/taxonomy-manager-ui-mockup/master/public/data/concept.json"
+      "url": "https://adam-digirati.github.io/concept.json"
     },{
       "sha": "8027427d52d589e3167685ce7e59d7b65468555f",
       "path": "Fertilizer",
       "type": "concept",
-      "url": "https://raw.githubusercontent.com/adam-digirati/taxonomy-manager-ui-mockup/master/public/data/concept.json"
+      "url": "https://adam-digirati.github.io/concept.json"
     },{
       "sha": "8027427d52d589e3167685ce7e59d7b65468555a",
       "path": "Steel",
       "type": "concept",
-      "url": "https://raw.githubusercontent.com/adam-digirati/taxonomy-manager-ui-mockup/master/public/data/concept.json"
+      "url": "https://adam-digirati.github.io/concept.json"
     },{
       "sha": "8027427d52d589e3167685ce7e59d7b65468555b",
       "path": "CRU Vertical Topic",
       "type": "concept",
-      "url": "https://raw.githubusercontent.com/adam-digirati/taxonomy-manager-ui-mockup/master/public/data/concept.json"
+      "url": "https://adam-digirati.github.io/concept.json"
     }]   
 }
