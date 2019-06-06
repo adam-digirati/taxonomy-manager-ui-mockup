@@ -8,9 +8,10 @@ type SchemaEditorTextFieldProps = {
   handleChange?: React.EventHandler<HtmlEvent>;
   name:string;
   label?:string;
+  multiline?:boolean;
 };
 
-const SchemaEditorTextField: React.SFC<SchemaEditorTextFieldProps> = ({ value, handleChange, name, label }) => (
+const SchemaEditorTextField: React.SFC<SchemaEditorTextFieldProps> = ({ value, handleChange, name, label, multiline=false }) => (
   <FormControl>
     {label && <InputLabel htmlFor={name}>{label}</InputLabel>}
     <Input
@@ -20,6 +21,7 @@ const SchemaEditorTextField: React.SFC<SchemaEditorTextFieldProps> = ({ value, h
       inputProps={{
         "aria-label": label
       }}
+      multiline={multiline}
     />
   </FormControl>
 );

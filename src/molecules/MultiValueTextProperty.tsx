@@ -7,6 +7,7 @@ type MultilingualTextPropertyProps = {
   name: string;
   value: Array<string>;
   label: string;
+  multiline?: boolean;
 };
 
 const MultilingualTextProperty: React.SFC<MultilingualTextPropertyProps> = ({

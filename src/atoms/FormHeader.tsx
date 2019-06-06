@@ -6,7 +6,7 @@ type FromHeaderProps = {
 }
 
 const FormHeader: React.SFC<FromHeaderProps> = ({ children }) => (
-  <Typography variant="h3">{children}</Typography>
+  <Typography variant="h4">{children}</Typography>
 );
 
 export default FormHeader;

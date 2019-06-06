@@ -5,12 +5,18 @@ import MultiValueTextProperty from "../molecules/MultiValueTextProperty";
 import Form from '../atoms/Form';
 import ItemIdEditor from '../atoms/ItemIdEditor';
 import FormHeader from '../atoms/FormHeader';
+import TwoColumnLayout from '../atoms/TwoColumnLayout';
+import ColumnBreak from '../atoms/ColumnBreak';
 
+type ProjectPropertiesProps = {
+  data: any,
+}
 
-const ProjectProperties = () => (
+const ProjectProperties: React.SFC<ProjectPropertiesProps> = ({ data }) => (
   <Form>
     <FormHeader>CRU Taxonomy UAT [Project]</FormHeader>
     <ItemIdEditor itemId="https://crutaxonomy.poolparty.biz/CRUvocabularies" itemIdBase="https://crutaxonomy.poolparty.biz/" />
+    <TwoColumnLayout>
     <MultilingualTextProperty
       name="http://purl.org/dc/terms/title"
       label="Title"
@@ -24,14 +30,17 @@ const ProjectProperties = () => (
     <MultilingualTextProperty
       name="http://purl.org/dc/terms/description"
       label="Description"
+      multiline={true}
       value={[
         {
           lang: "en",
           value:
-            "Taxonomy built for use by CRU. Exported and downgraded from v5.6.1 to v5.4.3. 20161129."
+            //"Taxonomy built for use by CRU. Exported and downgraded from v5.6.1 to v5.4.3. 20161129."
+            ""
         }
       ]}
     />
+    <ColumnBreak />
     <MultiValueTextProperty
       name="http://purl.org/dc/terms/creator"
       label="Author"
@@ -61,6 +70,7 @@ const ProjectProperties = () => (
     placeholder default language
 
     placeholder add vocabularies
+    </TwoColumnLayout>
   </Form>
 );
 // Workflow

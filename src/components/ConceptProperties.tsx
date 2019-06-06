@@ -5,78 +5,74 @@ import MultiValueTextProperty from "../molecules/MultiValueTextProperty";
 import Form from '../atoms/Form';
 import ItemIdEditor from '../atoms/ItemIdEditor';
 import FormHeader from '../atoms/FormHeader';
+import MultiForeignObjectProperty from "../molecules/MultiForeignObjectProperty";
+import ForeignObjectProperty from "../molecules/ForeignObjectProperty";
+import TwoColumnLayout from '../atoms/TwoColumnLayout';
+import ColumnBreak from '../atoms/ColumnBreak';
 
-
-const ConceptProperties = () => (
+type ConceptPropertiesProps = {
+  data: any,
+}
+const ConceptProperties:React.SFC<ConceptPropertiesProps> = () => (
   <Form>
-    <FormHeader>CRU Commodity and Nutrient [Concept Scheme]</FormHeader>
+    <FormHeader>Aluminium [Concept]</FormHeader>
     <ItemIdEditor itemId="https://crutaxonomy.poolparty.biz/CRUvocabularies/b1c4d353-7058-4931-9629-7b2972463f44" itemIdBase="https://crutaxonomy.poolparty.biz/CRUvocabularies/" />
+    <TwoColumnLayout>
+      
+    <MultiForeignObjectProperty 
+       name="http://www.w3.org/2004/02/skos/core#broader"
+       label="Broader Concepts"
+       value={['Albanina']}
+    />
+    <MultiForeignObjectProperty 
+       name="http://www.w3.org/2004/02/skos/core#narrower"
+       label="Narrower Concepts"
+       value={['Albanina']}
+    />
+    <MultiForeignObjectProperty 
+       name="http://www.w3.org/2004/02/skos/core#related"
+       label="Related Concepts"
+       value={['Albanina']}
+    />
+    <ForeignObjectProperty 
+       name="http://www.w3.org/2004/02/skos/core#topConceptOf"
+       label="Top Concept of Concept Schemes"
+       value={'Albanina'}
+    />
+    <ColumnBreak />
     <MultilingualTextProperty
-      name="http://purl.org/dc/terms/title"
-      label="Title"
-      value={[{ lang: "en", value: "CRU Commodity and Nutrient" }]}
+      name="http://www.w3.org/2004/02/skos/core#prefLabel"
+      label="Preferred Label"
+      value={[{ lang: "en", value: "Aluminium" }]}
     />
     <MultilingualTextProperty
-      name="http://purl.org/dc/terms/subject"
-      label="Subject"
-      value={[{ lang: "en", value: "" }]}
+      name="http://www.w3.org/2004/02/skos/core#altLabel"
+      label="Alternative Labels"
+      value={[{ }]}
     />
     <MultilingualTextProperty
-      name="http://purl.org/dc/terms/description"
-      label="Description"
-      value={[
-        {
-          lang: "en",
-          value:
-            ""
-        }
-      ]}
+      name="http://www.w3.org/2004/02/skos/core#hiddenLabel"
+      label="Hidden Labels"
+      value={[]}
     />
     <MultiValueTextProperty
-      name="http://purl.org/dc/terms/creator"
-      label="Author"
-      value={["Dr Ian Piper"]}
+      name="http://www.w3.org/2004/02/skos/core#scopeNote"
+      label="Scope Notes"
+      value={[]}
     />
     <MultilingualTextProperty
-      name="http://purl.org/dc/terms/publisher"
-      label="Publisher (Organisation)"
-      value={[{ lang: "en", value: "Tellura" }]}
+      name="div_http://www.w3.org/2004/02/skos/core#definition"
+      label="Definitions"
+      multiline
+      value={[]}
     />
     <MultiValueTextProperty 
       name="http://purl.org/dc/terms/contributor"
       label="Contributor" 
       value={["Clair Honeywill"]} />
-    Todo: Top concepts
-    {/* <TextProperty
-      name="http://purl.org/dc/terms/date"
-      label="Created"
-      value="19.04.2017 - 18:13"
-    />
-    <TextProperty
-      name="http://purl.org/dc/terms/license"
-      label="License"
-      value=""
-    />
-    -Placeholder language selector
-
-    placeholder default language
-
-    placeholder add vocabularies */}
+    </TwoColumnLayout>
   </Form>
 );
-// Workflow
-// Disabled
-// Quality Setting
-// Default edit
-// User Groups
-// Public
-// URI Generation
-// URI	https://crutaxonomy.poolparty.biz/CRUvocabularies/<UUID>
-// Repository Type
-// Memory
-// Repository Location
-// Local Repository
-// Project Version
-//"test";
+
 
 export default ConceptProperties;

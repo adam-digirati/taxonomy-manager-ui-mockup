@@ -3,7 +3,7 @@ import TextFieldWithLanguage from "../atoms/TextFieldWithLanguage";
 import FormFieldLabel from '../atoms/FormFieldLabel';
 import FromGroup from '../atoms/FormGroup';
 
-const DEFAULT_PROJECT_LANGUAGES = ["en", "de", "nl"];
+const DEFAULT_PROJECT_LANGUAGES = ["en"];
 
 type HtmlEvent = React.ChangeEvent<HTMLInputElement>;
 
@@ -12,6 +12,7 @@ type MultilingualTextPropertyProps = {
   handleChange?: React.EventHandler<HtmlEvent>;
   name:string;
   label:string;
+  multiline?: boolean
 }
 
 const MultilingualTextProperty: React.SFC<MultilingualTextPropertyProps> = ({ value, label, ...props }) => (

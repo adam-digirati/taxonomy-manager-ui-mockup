@@ -1,0 +1,29 @@
+{
+    "sha": "fdd9cf64b64c5072ee2bc8af053c2f1d86fa21bc",
+    "tree": [{
+      "sha": "8027427d52d589e3167685ce7e59d7b65468555d",
+      "path": "Aluminium",
+      "type": "concept",
+      "url": "http://localhost:3000/data/concept.json"
+    },{
+      "sha": "8027427d52d589e3167685ce7e59d7b65468555e",
+      "path": "Coal",
+      "type": "concept",
+      "url": "http://localhost:3000/data/concept.json"
+    },{
+      "sha": "8027427d52d589e3167685ce7e59d7b65468555f",
+      "path": "Fertilizer",
+      "type": "concept",
+      "url": "http://localhost:3000/data/concept.json"
+    },{
+      "sha": "8027427d52d589e3167685ce7e59d7b65468555a",
+      "path": "Steel",
+      "type": "concept",
+      "url": "http://localhost:3000/data/concept.json"
+    },{
+      "sha": "8027427d52d589e3167685ce7e59d7b65468555b",
+      "path": "CRU Vertical Topic",
+      "type": "concept",
+      "url": "http://localhost:3000/data/concept.json"
+    }]   
+}

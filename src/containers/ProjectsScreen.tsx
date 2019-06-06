@@ -26,16 +26,32 @@ const DUMMY_PROJECTS = [
   }
 ];
 
-const ProjectScreen: React.SFC = () => (
-  <AppLayout
-    topBar={
-      <TopBar title="Taxonomy Manager">
-        <LogoutButton />
-      </TopBar>
-    }
-  >
-    <ProjectsListLayout projects={DUMMY_PROJECTS} />
-  </AppLayout>
-);
+type ProjectScreenProps = {
+  handleSelectProject: React.ReactEventHandler;
+  handleLogout: React.ReactEventHandler;
+}
+
+const ProjectScreen: React.SFC<ProjectScreenProps> = ({ handleSelectProject, handleLogout }) => {
+  const [projects, setProjects] = React.useState(DUMMY_PROJECTS);
+  return (
+    <AppLayout
+      topBar={
+        <TopBar title="Taxonomy Manager">
+          <LogoutButton onClick={handleLogout}/>
+        </TopBar>
+      }
+    >
+      <ProjectsListLayout 
+        projects={projects}
+        handleSelectProject={handleSelectProject}
+        handleDeleteProject={(project:any)  => {
+          setProjects(
+            projects.filter(proj=>proj.id !== project.id)
+          )
+        }}
+      />
+    </AppLayout>
+  );
+}
 
 export default ProjectScreen;

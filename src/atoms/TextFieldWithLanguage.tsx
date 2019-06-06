@@ -14,6 +14,7 @@ type SchemaEditorTextFieldProps = {
   name: string;
   label?: string;
   languageCode: string;
+  multiline?:boolean;
 };
 
 const SchemaEditorTextField: React.SFC<SchemaEditorTextFieldProps> = ({
@@ -21,7 +22,8 @@ const SchemaEditorTextField: React.SFC<SchemaEditorTextFieldProps> = ({
   handleChange,
   name,
   label,
-  languageCode
+  languageCode,
+  multiline=false,
 }) => (
   <FormControl>
     {label && <InputLabel htmlFor={`${name}_${languageCode}`}>{label}</InputLabel>}
@@ -32,6 +34,8 @@ const SchemaEditorTextField: React.SFC<SchemaEditorTextFieldProps> = ({
       endAdornment={
         <InputAdornment position="end">{languageCode}</InputAdornment>
       }
+      multiline={multiline}
+      type="display"
       inputProps={{
         "aria-label": label
       }}

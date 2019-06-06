@@ -12,6 +12,7 @@ type ItemIdEditorProps = {
 const useStyle = makeStyles((theme:Theme) => ({
     root: {
       marginBottom: theme.spacing(8),
+      marginTop: theme.spacing(1),
     },
     idField: {
       fontSize: theme.typography.body1.fontSize,

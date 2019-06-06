@@ -6,7 +6,7 @@ type SplitPanelProps = {
 }
 
 const SplitPanel: React.SFC<SplitPanelProps> = ({ children }) => (
-  <SplitPane split="vertical" minSize={250}>
+  <SplitPane split="vertical" minSize={420}>
     {children}
   </SplitPane>
 );

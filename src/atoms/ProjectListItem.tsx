@@ -22,7 +22,7 @@ const ProjectListItem: React.SFC<ProjectListItemProps> = ({
   handleOpen,
   handleDelete
 }) => (
-  <ListItem onClick={handleOpen}>
+  <ListItem onClick={handleOpen} button component="a">
     <ListItemAvatar>
       <Avatar>
         <Folder />

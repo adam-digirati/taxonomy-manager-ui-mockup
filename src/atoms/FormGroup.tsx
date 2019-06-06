@@ -8,7 +8,7 @@ type FormGroupProps = {
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: 400,
-    marginBottom: theme.spacing(4)
+    marginBottom: theme.spacing(6)
   }
 }));
 

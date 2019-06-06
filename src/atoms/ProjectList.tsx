@@ -10,8 +10,8 @@ const ProjectList: React.SFC<ProjectListProps> = ({
   toolbarItems = []
 }) => (
   <Grid container direction="column" justify="flex-start" alignItems="center">
-    <Typography variant="h2">Available Projects</Typography>
-    <Toolbar>{toolbarItems}</Toolbar>
+    <div style={{margin: '24px 0'}}><Typography variant="h2">Available Projects</Typography></div>
+    <div style={{margin: '24px 0', width: 420 }}><Toolbar>{toolbarItems}</Toolbar></div>
     <List dense={false}>{children}</List>
   </Grid>
 );
