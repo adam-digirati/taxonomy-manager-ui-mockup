@@ -65,27 +65,13 @@ const ProjectProperties: React.SFC<ProjectPropertiesProps> = ({ data }) => (
       label="License"
       value=""
     />
-    -Placeholder language selector
+    -Placeholder language selector<br/>
 
-    placeholder default language
+    placeholder default language<br></br>
 
     placeholder add vocabularies
     </TwoColumnLayout>
   </Form>
 );
-// Workflow
-// Disabled
-// Quality Setting
-// Default edit
-// User Groups
-// Public
-// URI Generation
-// URI	https://crutaxonomy.poolparty.biz/CRUvocabularies/<UUID>
-// Repository Type
-// Memory
-// Repository Location
-// Local Repository
-// Project Version
-//"test";
 
 export default ProjectProperties;

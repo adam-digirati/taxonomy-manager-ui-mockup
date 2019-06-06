@@ -4,26 +4,26 @@
     "sha": "fdd9cf64b64c5072ee2bc8af053c2f1d86fa21bc",
     "path": "CRU Commodity and Nutrient (6)",
     "type": "conceptScheme",
-    "url": "http://localhost:3000/data/conceptScheme.json"
+    "url": "https://raw.githubusercontent.com/adam-digirati/taxonomy-manager-ui-mockup/master/public/data/conceptScheme.json"
   },{
     "sha": "f06235c460c2de3d97efc8371125594b7b761b08",
     "path": "CRU MASTER Location (3)",
     "type": "conceptScheme",
-    "url": "http://localhost:3000/data/conceptScheme.json"
+    "url": "https://raw.githubusercontent.com/adam-digirati/taxonomy-manager-ui-mockup/master/public/data/conceptScheme.json"
   },{
     "sha": "cac281c3321a804bfd44208b1cc63d1fb4e114a9",
     "path": "CRU MASTER Topic (123)",
     "type": "conceptScheme",
-    "url": "http://localhost:3000/data/conceptScheme.json"
+    "url": "https://raw.githubusercontent.com/adam-digirati/taxonomy-manager-ui-mockup/master/public/data/conceptScheme.json"
   },{
     "sha": "c22cfbc3d27ef9bc4620e0f49549ec0d3bee4902",
     "path": "CRU Vertical Location (123)",
     "type": "conceptScheme",
-    "url": "http://localhost:3000/data/conceptScheme.json"
+    "url": "https://raw.githubusercontent.com/adam-digirati/taxonomy-manager-ui-mockup/master/public/data/conceptScheme.json"
   },{
     "sha": "55c195c77ce7b23ab3c6a3eabb35b89e654b8133",
     "path": "CRU Vertical Topic (11)",
     "type": "conceptScheme",
-    "url": "http://localhost:3000/data/conceptScheme.json"
+    "url": "https://raw.githubusercontent.com/adam-digirati/taxonomy-manager-ui-mockup/master/public/data/conceptScheme.json"
   }]   
 }
