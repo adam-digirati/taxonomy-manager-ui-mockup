@@ -27,7 +27,7 @@ class TaxonomyTree extends React.Component<TaxonomyTreeProps, TaxonomyTreeState>
       sha: "b3d36479a033ed6296c34fdf689d5cdbcf7a0136",
       path: "CRU Taxonomy UAT",
       type: "project",
-      url: "https://adam-digirati.github.io/project-contents.json"
+      url: "https://adam-digirati.github.io/project-contents.json?2"
     }
   };
 
